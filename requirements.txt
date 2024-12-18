@@ -1,0 +1,147 @@
+# User Manual for Personal Finance Manager
+
+## **Introduction**
+The Personal Finance Manager is a command-line application designed to help users manage their income, expenses, budgets, and financial reports effectively. This guide provides step-by-step instructions for installing and using the application.
+
+---
+
+## **System Requirements**
+- **Operating System**: Windows, macOS, or Linux
+- **Python Version**: Python 3.8 or later
+- **Dependencies**: Listed in `requirements.txt`
+
+---
+
+## **Installation Instructions**
+
+### **1. Install Python**
+1. Download and install Python 3.8 or later from the [official Python website](https://www.python.org/).
+2. Ensure that Python is added to your system PATH during installation.
+3. Verify the installation by running:
+   ```bash
+   python --version
+   ```
+
+### **2. Clone or Download the Repository**
+1. Clone the repository from your source control (e.g., GitHub):
+   ```bash
+   git clone <repository_url>
+   ```
+   or download the project as a ZIP file and extract it.
+2. Navigate to the project folder:
+   ```bash
+   cd personal-finance-manager
+   ```
+
+### **3. Install Dependencies**
+Install the required Python libraries using `pip`:
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## **Usage Instructions**
+
+### **1. Initialize the Application**
+Run the application from the command line:
+```bash
+python main.py
+```
+
+You will be greeted with the following options:
+```
+Welcome to Personal Finance Manager
+
+1. Register
+2. Login
+3. Exit
+```
+
+### **2. Register a New User**
+1. Select `1` to register a new user.
+2. Enter a unique username and password when prompted.
+3. If the username is already taken, you will see an error message.
+
+### **3. Login**
+1. Select `2` to log in.
+2. Enter your username and password.
+3. Upon successful login, you will proceed to the main menu.
+
+### **4. Main Menu Options**
+After logging in, you can manage your finances using the following options:
+
+#### **4.1 Add Transaction**
+1. Select `1` to add a new transaction.
+2. Enter the type (`income` or `expense`), category, amount, description (optional), and date (optional).
+3. Transactions will be saved to the database.
+
+#### **4.2 View Transactions**
+1. Select `2` to view transactions.
+2. Filter by type (`income` or `expense`) or view all transactions.
+
+#### **4.3 Update Transaction**
+1. Select `3` to update an existing transaction.
+2. Provide the transaction ID and the details to update.
+
+#### **4.4 Delete Transaction**
+1. Select `4` to delete a transaction.
+2. Provide the transaction ID for deletion.
+
+#### **4.5 Logout**
+1. Select `5` to log out of the application.
+
+#### **4.6 Generate Reports**
+1. Select `6` to generate financial reports.
+2. Choose from the following options:
+   - Monthly Report
+   - Yearly Report
+   - Transactions by Category
+3. Follow the prompts to generate the desired report.
+
+#### **4.7 Manage Budget**
+1. Select `7` to manage your budget.
+2. Choose from the following options:
+   - Set Budget: Define a budget for a category and month.
+   - Check Budget: View budget status for a specific month.
+
+#### **4.8 Backup & Restore**
+1. Select `8` to backup or restore your database.
+2. Choose `1` to backup your data or `2` to restore from a backup file.
+
+---
+
+## **Error Handling and Logging**
+1. Errors and invalid inputs are handled gracefully with appropriate messages displayed.
+2. Application logs are stored in `app.log` for debugging purposes.
+
+---
+
+## **Additional Notes**
+- **Database**: The application uses SQLite (`finance_manager.db`) for data storage.
+- **Backup**: Regularly back up your database to prevent data loss.
+- **Testing**: Unit tests can be run using `pytest`. See the `tests/` folder for details.
+
+---
+
+## **Troubleshooting**
+1. If you encounter issues with dependencies, try reinstalling them:
+   ```bash
+   pip install -r requirements.txt
+   ```
+2. Ensure the database file (`finance_manager.db`) is in the project directory.
+3. For Python path issues, set the `PYTHONPATH` environment variable:
+   ```bash
+   set PYTHONPATH=path/to/project
+   ```
+
+---
+
+## **Uninstallation**
+1. Delete the project folder.
+2. Remove the database file (`finance_manager.db`) if necessary.
+
+---
+
+Thank you for using the Personal Finance Manager! If you have any questions or need further assistance, feel free to contact the developer(vyas).
+
